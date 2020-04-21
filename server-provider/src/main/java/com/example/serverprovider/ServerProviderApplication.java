@@ -1,6 +1,7 @@
 package com.example.serverprovider;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -22,6 +23,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @Slf4j
 @EnableFeignClients //允许服务调用
 @EnableEurekaClient //允许注册到注册中心
+@MapperScan("com.example.serverprovider.mapper")//扫描MyBatis的mapper.java接口包
 @SpringBootApplication
 public class ServerProviderApplication {
 

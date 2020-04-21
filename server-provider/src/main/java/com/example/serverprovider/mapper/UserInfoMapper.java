@@ -1,6 +1,9 @@
 package com.example.serverprovider.mapper;
 
 import com.example.serverprovider.bean.UserInfo;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * gmall数据库中的user_info，mapper
@@ -18,5 +21,13 @@ public interface UserInfoMapper {
     int updateByPrimaryKeySelective(UserInfo record);
 
     int updateByPrimaryKey(UserInfo record);
+
+    /**
+     * 查询user_info所有数据
+     *
+     * @return List<UserInfo>
+     */
+    @Select("select * from user_info")//用注解可以直接执行简单的SQL语句
+    List<UserInfo> getUserInfo();
 
 }

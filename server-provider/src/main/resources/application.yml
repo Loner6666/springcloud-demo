@@ -8,13 +8,6 @@ server:
 spring:
   application:
     name: server-provider
-#注册中心地址
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8090/eureka/
-  instance:
-    prefer-ip-address: true
   #设置数据库连接
   datasource:
     url: jdbc:mysql://localhost:3306/gmall
@@ -23,6 +16,13 @@ eureka:
     driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
+#注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+  instance:
+    prefer-ip-address: true
 #扫描MyBatis的xml文件
 mybatis:
   mapper-locations: classpath:mapper/*.xml

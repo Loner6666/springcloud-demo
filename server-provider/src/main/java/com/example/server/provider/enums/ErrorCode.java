@@ -1,4 +1,4 @@
-package com.example.serverprovider.enums;
+package com.example.server.provider.enums;
 
 /**
  * 错误代码及含义

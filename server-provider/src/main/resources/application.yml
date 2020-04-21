@@ -29,4 +29,4 @@ mybatis:
 # 控制台打印SQL
 logging:
   level:
-    com.example.serverprovider.mapper: debug
+    com.example.server.provider.mapper: debug

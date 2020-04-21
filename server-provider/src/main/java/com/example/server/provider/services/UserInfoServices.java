@@ -1,6 +1,6 @@
-package com.example.serverprovider.services;
+package com.example.server.provider.services;
 
-import com.example.serverprovider.bean.UserInfo;
+import com.example.server.provider.bean.UserInfo;
 
 import java.util.List;
 

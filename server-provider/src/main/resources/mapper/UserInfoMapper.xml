@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.serverprovider.mapper.UserInfoMapper">
-    <resultMap id="BaseResultMap" type="com.example.serverprovider.bean.UserInfo">
+<mapper namespace="com.example.server.provider.mapper.UserInfoMapper">
+    <resultMap id="BaseResultMap" type="com.example.server.provider.bean.UserInfo">
         <id column="id" property="id" jdbcType="BIGINT"/>
         <result column="login_name" property="loginName" jdbcType="VARCHAR"/>
         <result column="nick_name" property="nickName" jdbcType="VARCHAR"/>
@@ -25,7 +25,7 @@
     delete from user_info
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.example.serverprovider.bean.UserInfo">
+    <insert id="insert" parameterType="com.example.server.provider.bean.UserInfo">
     insert into user_info (id, login_name, nick_name, 
       passwd, name, phone_num, 
       email, head_img, user_level
@@ -35,7 +35,7 @@
       #{email,jdbcType=VARCHAR}, #{headImg,jdbcType=VARCHAR}, #{userLevel,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.example.serverprovider.bean.UserInfo">
+    <insert id="insertSelective" parameterType="com.example.server.provider.bean.UserInfo">
         insert into user_info
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -96,7 +96,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.example.serverprovider.bean.UserInfo">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.server.provider.bean.UserInfo">
         update user_info
         <set>
             <if test="loginName != null">
@@ -126,7 +126,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.example.serverprovider.bean.UserInfo">
+    <update id="updateByPrimaryKey" parameterType="com.example.server.provider.bean.UserInfo">
     update user_info
     set login_name = #{loginName,jdbcType=VARCHAR},
       nick_name = #{nickName,jdbcType=VARCHAR},

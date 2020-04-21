@@ -1,6 +1,6 @@
-package com.example.serverprovider.mapper;
+package com.example.server.provider.mapper;
 
-import com.example.serverprovider.bean.UserInfo;
+import com.example.server.provider.bean.UserInfo;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

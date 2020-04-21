@@ -1,9 +1,9 @@
-package com.example.serverprovider.controller;
+package com.example.server.provider.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.example.serverprovider.bean.UserInfo;
-import com.example.serverprovider.common.ResultObject;
-import com.example.serverprovider.services.UserInfoServices;
+import com.example.server.provider.bean.UserInfo;
+import com.example.server.provider.common.ResultObject;
+import com.example.server.provider.services.UserInfoServices;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

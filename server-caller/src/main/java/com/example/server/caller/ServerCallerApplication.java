@@ -1,4 +1,4 @@
-package com.example.servercaller;
+package com.example.server.caller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -21,8 +21,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * server-caller（服务调用者）
  */
 @Slf4j
-@EnableFeignClients //允许服务调用
-@EnableEurekaClient //允许注册到注册中心
+@EnableEurekaClient//向注册中心注册，表示我是一个服务
+@EnableFeignClients//表示我可以调用其他服务，如果一个服务想要调用其他服务，则必须加上此注解
 @SpringBootApplication
 public class ServerCallerApplication {
 

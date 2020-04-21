@@ -1,7 +1,7 @@
-package com.example.serverprovider.common;
+package com.example.server.provider.common;
 
 
-import com.example.serverprovider.enums.ErrorCode;
+import com.example.server.provider.enums.ErrorCode;
 
 import java.io.Serializable;
 

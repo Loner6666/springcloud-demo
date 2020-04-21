@@ -1,8 +1,8 @@
-package com.example.serverprovider.services.impl;
+package com.example.server.provider.services.impl;
 
-import com.example.serverprovider.bean.UserInfo;
-import com.example.serverprovider.mapper.UserInfoMapper;
-import com.example.serverprovider.services.UserInfoServices;
+import com.example.server.provider.bean.UserInfo;
+import com.example.server.provider.mapper.UserInfoMapper;
+import com.example.server.provider.services.UserInfoServices;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

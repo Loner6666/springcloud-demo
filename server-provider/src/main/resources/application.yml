@@ -1,9 +1,6 @@
 #服务端口
 server:
   port: 8091
-  #  服务的根路径
-  servlet:
-    context-path: /gmall
 #服务名称
 spring:
   application:

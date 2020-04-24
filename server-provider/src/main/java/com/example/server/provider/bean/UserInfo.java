@@ -4,13 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * gmall数据库中的user_info
  */
 @Data//getter、setter方法
 @AllArgsConstructor//全参构造器
 @NoArgsConstructor//无参构造器
-public class UserInfo {
+public class UserInfo implements Serializable {
+
+    private static final long serialVersionUID = 7378789818558898771L;
 
     private Long id;//编号
     private String loginName;//用户名称

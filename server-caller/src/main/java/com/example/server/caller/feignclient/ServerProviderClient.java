@@ -1,7 +1,9 @@
 package com.example.server.caller.feignclient;
 
+import com.example.server.caller.common.ResultObject;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @Description： 调用server-provider的SayHello类的方法
@@ -10,9 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @CreateTime：2020:04:21
  */
 @FeignClient(value = "server-provider") //调用的服务名称
-public interface HelloClient {
+public interface ServerProviderClient {
 
     @GetMapping("/hello")
     public String sayHello();
+
+    @RequestMapping("/getUserInfo")
+    public ResultObject getUserInfo();
 
 }

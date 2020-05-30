@@ -1,7 +1,6 @@
 package com.example.server.provider.mapper;
 
 import com.example.server.provider.bean.UserInfo;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -27,7 +26,7 @@ public interface UserInfoMapper {
      *
      * @return List<UserInfo>
      */
-    @Select("select * from user_info")//用注解可以直接执行简单的SQL语句
+//    @Select("select * from user_info")//用注解可以直接执行简单的SQL语句
     List<UserInfo> getUserInfo();
 
 }
